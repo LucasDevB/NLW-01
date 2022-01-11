@@ -532,6 +532,40 @@ a:hover {
   display: inline-block;
 }
 
+button {
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: .25rem;
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(73 170 38 / var(--tw-bg-opacity));
+  padding: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 215 5 / var(--tw-bg-opacity));
+}
+
+.button.cancel {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: .25rem;
+  --tw-text-opacity: 1;
+  color: rgb(233 41 41 / var(--tw-text-opacity));
+  opacity: 0.6;
+  border: 2px #e92929 solid;
+}
+
+.button.cancel:hover {
+  opacity: 1;
+}
+
 /*Header =================== Header */
 
 header {
@@ -662,6 +696,65 @@ header {
 .expense {
   --tw-text-opacity: 1;
   color: rgb(233 41 41 / var(--tw-text-opacity));
+}
+
+/*Modal =================== Modal */
+
+.modal-overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.7);
+  opacity: 0;
+}
+
+.modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  width: 90%;
+  max-width: 500px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 242 245 / var(--tw-bg-opacity));
+  padding: 2.4rem;
+}
+
+/*Form =================== Form */
+
+#form h2 {
+  margin-top: 0px;
+}
+
+input {
+  width: 100%;
+  border-radius: 0.2rem;
+  border-width: 0px;
+  padding: .8rem;
+}
+
+.input-group {
+  margin-top: .8rem;
+}
+
+.input-group small {
+  opacity: 0.4;
+}
+
+.input-group.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-group.actions .button, .input-group.actions button {
+  width: 48%;
 }
 
 /*Footer =================== Footer */

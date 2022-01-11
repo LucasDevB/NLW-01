@@ -51,6 +51,22 @@ a:hover {
     @apply inline-block mb-[.8rem];
 }
 
+button {
+    @apply w-full h-[50px] border-0 text-white bg-[#49aa26] p-0 rounded-[.25rem] cursor-pointer;
+}
+
+button:hover {
+    @apply bg-[#3dd705];
+}
+
+.button.cancel {
+    @apply text-[#e92929] rounded-[.25rem] h-[50px] flex justify-center items-center opacity-60;
+    border: 2px #e92929 solid;
+}
+
+.button.cancel:hover {
+    @apply opacity-100;
+}
 
 /*Header =================== Header */
 header {
@@ -137,6 +153,46 @@ header {
     @apply text-[#e92929];
 }
 
+
+/*Modal =================== Modal */
+.modal-overlay {
+    @apply w-full h-full bg-modal-bg fixed top-0 flex items-center justify-center
+    opacity-0 invisible;
+}
+
+.modal-overlay.active {
+    @apply opacity-100 visible;
+}
+
+.modal {
+    @apply bg-[#f0f2f5] p-[2.4rem] w-[90%] max-w-[500px];
+}
+
+
+/*Form =================== Form */
+#form h2{
+    @apply mt-0;
+}
+
+input {
+    @apply border-0 rounded-[0.2rem] p-[.8rem] w-full;
+}
+
+.input-group {
+    @apply mt-[.8rem];
+}
+
+.input-group small {
+    @apply opacity-[0.4];
+}
+
+.input-group.actions {
+    @apply flex justify-between items-center;
+}
+
+.input-group.actions .button, .input-group.actions button {
+    @apply w-[48%];
+}
 
 /*Footer =================== Footer */
 footer {

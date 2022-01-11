@@ -8,14 +8,27 @@
     @apply m-0 p-0 box-border;
 }
 
+html {
+    @apply text-[93.75%] /* 15px */
+}
+
+
 body {
     @apply bg-[#f0f2f5];
     font-family: 'Poppins', sans-serif;
 }
 
+.sr-only {
+    @apply absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
 .container {
     @apply m-auto;
-    width: min(80vw, 800px)
+    width: min(90vw, 800px)
 }
 
 
@@ -25,9 +38,23 @@ h2 {
 }
 
 
+/*Links & Buttons =================== Links & Buttons */
+a {
+    @apply text-[#49aa26] no-underline;
+}
+
+a:hover {
+    @apply text-[#3dd705]
+}
+
+.button.new {
+    @apply inline-block mb-[.8rem];
+}
+
+
 /*Header =================== Header */
 header {
-    @apply bg-[#2D4A22] pt-3 pb-[4rem] text-center;
+    @apply bg-[#2D4A22] pt-[2rem] pb-[10rem] flex justify-center;
 }
 
 #logo {
@@ -37,35 +64,39 @@ header {
 
 /*Balance =================== Balance */
 #balance {
-    @apply mt-[-7.5rem]
+    @apply mt-[-8rem]
 }
 
 #balance h2 {
-    @apply text-[#fff];
+    @apply text-[#fff] mt-0;
 }
 
 
 /*Cards =================== Cards */
 .card {
-    @apply bg-white px-[1rem] rounded-[.25rem] mb-[.5rem] text-dark-blue max-h-[3rem];
+    @apply bg-white py-[1.5rem] px-[2rem] rounded-[.25rem] mb-[2rem] text-dark-blue;
 }
 
 .card h3 {
-    @apply font-normal text-[.8rem];
+    @apply font-normal text-[1rem] flex items-center justify-between;
 }
 
 .card p {
-    @apply text-[1rem] leading-[1rem] mt-[.2rem]; 
+    @apply text-[2rem] leading-[3rem] mt-[1rem]; 
 }
 
 .card.total {
-    @apply bg-[#46da11] mb-[-1.5rem];
+    @apply bg-[#46da11] text-white;
 }
 
 
 /*Table =================== Table */
+#transaction {
+    @apply block overflow-x-auto;
+}
+
 #data-table {
-    @apply w-full border-separate text-center text-[#969cb3];
+    @apply w-full border-separate text-[#969cb3];
 }
 
 .table-head tr th:first-child,
@@ -73,11 +104,16 @@ header {
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
-#data-table th {
-    @apply bg-white  font-normal py-[1rem] px-[2rem] text-left;
+.table-head tr th:last-child,
+.table-body tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
-.table-body  tr {
+#data-table th {
+    @apply bg-white font-normal py-[1rem] px-[2rem] text-left;
+}
+
+.table-body tr {
     @apply opacity-[0.7]
 }
 
@@ -86,7 +122,7 @@ header {
 }
 
 #data-table td {
-    @apply bg-white;
+    @apply bg-white py-[1rem] px-[2rem];
 }
 
 .description {
@@ -104,5 +140,18 @@ header {
 
 /*Footer =================== Footer */
 footer {
-    @apply text-center pt-[1rem] px-[2rem] text-dark-blue;
+    @apply text-center pt-[4rem] px-[2rem] text-dark-blue opacity-[0.6];
 }
+
+
+/*Responsive =================== Responsive */
+@media (min-width: 800px) {
+    html {
+        @apply text-[87.5%]
+    }
+
+    #balance {
+        @apply grid grid-cols-3 gap-[2rem];
+    }
+}
+

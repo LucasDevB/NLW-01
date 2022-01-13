@@ -165,9 +165,8 @@ header {
 }
 
 .modal {
-    @apply bg-[#f0f2f5] p-[2.4rem] w-[90%] max-w-[500px];
+    @apply bg-[#f0f2f5] p-[2.4rem] w-[90%] max-w-[500px] relative;
 }
-
 
 /*Form =================== Form */
 #form h2{

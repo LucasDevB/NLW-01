@@ -719,6 +719,7 @@ header {
 }
 
 .modal {
+  position: relative;
   width: 90%;
   max-width: 500px;
   --tw-bg-opacity: 1;
